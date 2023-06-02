@@ -1,14 +1,14 @@
 # Roundaround's Volume Fix
 
 <img src="https://img.shields.io/badge/Loader-Fabric-%23313e51?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/MC-1.19-%23313e51?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/MC-1.20%20|%201.19--1.19.4-%23313e51?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/Side-Client-%23313e51?style=for-the-badge"/>
 
 Fix volume controls in Minecraft to work as intended.
 
 ## Download
 
-https://modrinth.com/mod/roundaround-volume-fix
+https://modrinth.com/mod/volume-fix
 
 ## License
 
