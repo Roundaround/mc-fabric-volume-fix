@@ -21,7 +21,7 @@ public abstract class AbstractSoundInstanceMixin implements SoundRange {
   protected Sound sound;
 
   @Shadow
-  protected Random field_38800;
+  protected Random random;
 
   @Inject(method = "getVolume", at = @At("HEAD"), cancellable = true)
   private void getVolume(CallbackInfoReturnable<Float> info) {
@@ -34,6 +34,6 @@ public abstract class AbstractSoundInstanceMixin implements SoundRange {
   }
 
   private float calculateVolume() {
-    return this.volume * this.sound.getVolume().get(this.field_38800);
+    return this.volume * this.sound.getVolume().get(this.random);
   }
 }
