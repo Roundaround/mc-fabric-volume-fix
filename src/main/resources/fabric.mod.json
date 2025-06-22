@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "volumefix",
+  "id": "${modId}",
   "version": "${version}",
   "name": "Volume Fix",
-  "description": "Fix volume controls in Minecraft to work as intended.\n${library}",
+  "description": "Fix volume controls in Minecraft to work as intended.",
   "authors": [
     "Roundaround"
   ],
@@ -13,14 +13,12 @@
     "issues": "https://github.com/Roundaround/mc-fabric-volume-fix/issues"
   },
   "license": "MIT",
-  "icon": "assets/volumefix/icon.png",
   "environment": "client",
-  "mixins": [
-    "volumefix.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=0.13.3",
-    "minecraft": "1.21.*",
-    "java": ">=17"
+  "custom": {
+    "loom:injected_interfaces": {
+      "net/minecraft/class_1102": [
+        "me/roundaround/volumefix/client/sound/SoundRange"
+      ]
+    }
   }
 }

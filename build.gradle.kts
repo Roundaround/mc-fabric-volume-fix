@@ -1,9 +1,3 @@
 plugins {
-  id("roundalib")
-}
-
-loom {
-  interfaceInjection {
-    getIsEnabled().set(true)
-  }
+  id("roundalib-gradle") version "1.0.0"
 }

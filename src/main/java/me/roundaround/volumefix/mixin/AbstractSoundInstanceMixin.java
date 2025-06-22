@@ -1,17 +1,16 @@
 package me.roundaround.volumefix.mixin;
 
+import me.roundaround.volumefix.client.sound.SoundRange;
+import net.minecraft.client.sound.AbstractSoundInstance;
+import net.minecraft.client.sound.Sound;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.random.Random;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
-import me.roundaround.volumefix.client.sound.SoundRange;
-import net.minecraft.client.sound.AbstractSoundInstance;
-import net.minecraft.client.sound.Sound;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.random.Random;
 
 @Mixin(AbstractSoundInstance.class)
 public abstract class AbstractSoundInstanceMixin implements SoundRange {
@@ -30,8 +29,8 @@ public abstract class AbstractSoundInstanceMixin implements SoundRange {
   }
 
   @Override
-  public float getRange() {
-    return calculateVolume();
+  public float volumefix$getRange() {
+    return this.calculateVolume();
   }
 
   @Unique

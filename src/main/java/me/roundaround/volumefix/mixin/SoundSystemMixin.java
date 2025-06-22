@@ -11,11 +11,11 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 @Mixin(SoundSystem.class)
 public abstract class SoundSystemMixin {
   @ModifyArg(
-      method = "play(Lnet/minecraft/client/sound/SoundInstance;)V",
+      method = "play(Lnet/minecraft/client/sound/SoundInstance;)Lnet/minecraft/client/sound/SoundSystem$PlayResult;",
       at = @At(value = "INVOKE", target = "Ljava/lang/Math;max(FF)F"),
       index = 0
   )
   private float useRangeInsteadOfVolume(float volume, @Local(argsOnly = true) SoundInstance sound) {
-    return sound instanceof SoundRange soundRange ? soundRange.getRange() : volume;
+    return sound instanceof SoundRange soundRange ? soundRange.volumefix$getRange() : volume;
   }
 }
