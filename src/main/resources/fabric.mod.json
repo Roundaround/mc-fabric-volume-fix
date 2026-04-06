@@ -16,7 +16,7 @@
   "environment": "client",
   "custom": {
     "loom:injected_interfaces": {
-      "net/minecraft/class_1102": [
+      "net/minecraft/client/resources/sounds/AbstractSoundInstance": [
         "me/roundaround/volumefix/client/sound/SoundRange"
       ]
     }
