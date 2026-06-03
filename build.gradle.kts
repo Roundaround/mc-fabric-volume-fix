@@ -10,7 +10,7 @@ allay {
   homepage.set("https://modrinth.com/mod/volume-fix")
   repository.set("https://github.com/Roundaround/mc-fabric-volume-fix")
   issues.set("https://github.com/Roundaround/mc-fabric-volume-fix/issues")
-  logoFile.set("assets/volumefix/icon.png")
+  logoFile.set("assets/volumefix/banner.png")
 
   modrinth {
     projectId.set("volume-fix")
