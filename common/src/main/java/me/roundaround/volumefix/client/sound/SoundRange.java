@@ -1,6 +1,6 @@
 package me.roundaround.volumefix.client.sound;
 
-import me.roundaround.gradle.api.annotation.InjectedInterface;
+import me.roundaround.allay.api.InjectedInterface;
 
 @InjectedInterface
 public interface SoundRange {

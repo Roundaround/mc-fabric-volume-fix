@@ -1,5 +1,6 @@
 package me.roundaround.volumefix.mixin;
 
+import me.roundaround.allay.api.MixinEnv;
 import me.roundaround.volumefix.client.sound.SoundRange;
 import net.minecraft.client.resources.sounds.AbstractSoundInstance;
 import net.minecraft.client.resources.sounds.Sound;
@@ -14,6 +15,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(AbstractSoundInstance.class)
+@MixinEnv(MixinEnv.Env.CLIENT)
 public abstract class AbstractSoundInstanceMixin implements SoundRange {
   @Shadow
   protected float volume;

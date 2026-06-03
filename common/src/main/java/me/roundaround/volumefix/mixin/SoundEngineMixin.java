@@ -1,6 +1,7 @@
 package me.roundaround.volumefix.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
+import me.roundaround.allay.api.MixinEnv;
 import me.roundaround.volumefix.client.sound.SoundRange;
 import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.client.sounds.SoundEngine;
@@ -9,6 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
 @Mixin(SoundEngine.class)
+@MixinEnv(MixinEnv.Env.CLIENT)
 public abstract class SoundEngineMixin {
   @ModifyArg(
       method = "play(Lnet/minecraft/client/resources/sounds/SoundInstance;)Lnet/minecraft/client/sounds/SoundEngine$PlayResult;",
