@@ -8,8 +8,8 @@ allay {
   authors.set(listOf("Roundaround"))
   license.set("MIT")
   homepage.set("https://modrinth.com/mod/volume-fix")
-  repository.set("https://github.com/Roundaround/mc-fabric-volume-fix")
-  issues.set("https://github.com/Roundaround/mc-fabric-volume-fix/issues")
+  repository.set("https://github.com/Roundaround/mc-volume-fix")
+  issues.set("https://github.com/Roundaround/mc-volume-fix/issues")
   logoFile.set("assets/volumefix/banner.png")
 
   modrinth {
